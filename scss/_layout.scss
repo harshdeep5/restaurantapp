@@ -78,18 +78,14 @@ $font-sm: 20px;
   cursor: pointer;
 }
 
-.footer p {
-  font-size: fontSize();
-}
-
-.sub-button {
-  @extend %button-format;
-  background-color: lightpink;
-}
-.tol-button {
-  @extend %button-format;
-  background-color: yellowgreen;
-}
+// .sub-button {
+//   @extend %button-format;
+//   background-color: lightpink;
+// }
+// .tol-button {
+//   @extend %button-format;
+//   background-color: yellowgreen;
+// }
 .section {
   width: 100%;
   height: 40vh;
@@ -149,7 +145,7 @@ $font-sm: 20px;
 
 .footer-distributed .footer-left p {
   color: #8f9296;
-  font-size: 14px;
+  font-size: fontSize();
   margin: 0;
 }
 /* Footer links */
@@ -161,54 +157,45 @@ $font-sm: 20px;
   margin: 0 0 10px;
   padding: 0;
   transition: ease 0.25s;
-}
-
-.footer-distributed p.footer-links a {
-  display: inline-block;
-  line-height: 1.8;
-  text-decoration: none;
-  color: inherit;
-  transition: ease 0.25s;
-}
-
-.footer-distributed .footer-links a:before {
-  content: "·";
-  font-size: 20px;
-  left: 0;
-  color: #fff;
-  display: inline-block;
-  padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-  content: none;
+  a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    transition: ease 0.25s;
+    :before {
+      content: "·";
+      font-size: 20px;
+      left: 0;
+      color: #fff;
+      display: inline-block;
+      padding-right: 5px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .footer-distributed .footer-right {
   float: right;
   margin-top: 6px;
   max-width: 180px;
-}
-
-.footer-distributed .footer-right a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  background-color: #33383b;
-  border-radius: 2px;
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 35px;
-  margin-left: 3px;
-  transition: all 0.25s;
-}
-
-.footer-distributed .footer-right a:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-}
-
-.footer-distributed p.footer-links a:hover {
-  text-decoration: underline;
+  a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+    transition: all 0.25s;
+    &:hover {
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+    }
+  }
 }
